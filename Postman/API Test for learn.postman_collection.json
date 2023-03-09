@@ -1,0 +1,720 @@
+{
+	"info": {
+		"_postman_id": "1430a739-529e-47ac-a665-7c41918dfaa1",
+		"name": "API Test for learn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25340751"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Basic Auth",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://the-internet.herokuapp.com/basic_auth",
+							"protocol": "https",
+							"host": [
+								"the-internet",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"basic_auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokeapi",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/ditto",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"ditto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validasi Limber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/ability/7/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ability",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GoRest",
+			"item": [
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"jony@gmail.com\",\r\n    \"name\" : \"jony\",\r\n    \"gender\" : \"male\",\r\n    \"status\" : \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Posts",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mayor\",\r\n    \"body\": \"Relax\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557906/posts",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557906",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Comments",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Arthur\",\r\n    \"email\": \"arthur@gmail.com\",\r\n    \"body\": \"Hero Never Surender\",\r\n    \"post\": \"Mayor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/posts/20512/comments",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"posts",
+								"20512",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Todos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"World Peace\",\r\n    \"status\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557906/todos",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557906",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557906",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557906"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\" : \"jony@gmail.com\",\r\n\"name\" : \"jony\",\r\n\"gender\" : \"male\",\r\n\"status\" : \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557475",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557475"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557475",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557475"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/posts/20512/comments",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"posts",
+								"20512",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Todos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557906/todos",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557906",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gorest.co.in/public/v2/users/557906/posts",
+							"protocol": "https",
+							"host": [
+								"gorest",
+								"co",
+								"in"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"557906",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "a950736a266e2cd58c553c04c6aaed5efeeccd449407f2aafb5f019fa7c15df8",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get List Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user?paper_pages=2&delay=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "paper_pages",
+							"value": "2"
+						},
+						{
+							"key": "delay",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"yoga\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Yuu\",\r\n    \"job\": \"President\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://reqres.in/api",
+			"type": "string"
+		}
+	]
+}

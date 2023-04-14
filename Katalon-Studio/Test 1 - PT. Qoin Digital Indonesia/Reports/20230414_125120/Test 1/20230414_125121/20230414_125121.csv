@@ -1,0 +1,25 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test 1,,,,2023-04-14 12:51:23,2023-04-14 12:53:15,1m - 52.489s,PASSED
+,,,,,,,
+Test Cases/GET list users,,,,2023-04-14 12:51:23,2023-04-14 12:52:28,1m - 4.861s,PASSED
+"sendRequest(findTestObject(""list users""))",,,,2023-04-14 12:51:24,2023-04-14 12:52:28,1m - 4.113s,PASSED
+"response = sendRequestAndVerify(findTestObject(""list users""))",,,,2023-04-14 12:52:28,2023-04-14 12:52:28,0.478s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-04-14 12:52:28,2023-04-14 12:52:28,0.002s,PASSED
+"verifyElementsCount(response, ""data.first_name"", 6)",,,,2023-04-14 12:52:28,2023-04-14 12:52:28,0.019s,PASSED
+"verifyElementPropertyValue(response, ""data[4].first_name"", ""Charles"")",,,,2023-04-14 12:52:28,2023-04-14 12:52:28,0.012s,PASSED
+,,,,,,,
+Test Cases/GET single user,,,,2023-04-14 12:52:28,2023-04-14 12:53:11,42.724s,PASSED
+"sendRequest(findTestObject(""single user""))",,,,2023-04-14 12:52:28,2023-04-14 12:52:50,21.230s,PASSED
+"response = sendRequestAndVerify(findTestObject(""single user""))",,,,2023-04-14 12:52:50,2023-04-14 12:53:11,21.335s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-04-14 12:53:11,2023-04-14 12:53:11,0.001s,PASSED
+"verifyElementPropertyValue(response, ""data.first_name"", ""Janet"")",,,,2023-04-14 12:53:11,2023-04-14 12:53:11,0.010s,PASSED
+,,,,,,,
+Test Cases/register successful,,,,2023-04-14 12:53:11,2023-04-14 12:53:14,2.773s,PASSED
+"sendRequest(findTestObject(""register successful""))",,,,2023-04-14 12:53:11,2023-04-14 12:53:12,0.683s,PASSED
+"response = sendRequestAndVerify(findTestObject(""register successful""))",,,,2023-04-14 12:53:12,2023-04-14 12:53:14,1.953s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-04-14 12:53:14,2023-04-14 12:53:14,0.002s,PASSED
+,,,,,,,
+Test Cases/update,,,,2023-04-14 12:53:14,2023-04-14 12:53:15,1.617s,PASSED
+"sendRequest(findTestObject(""update""))",,,,2023-04-14 12:53:14,2023-04-14 12:53:15,0.532s,PASSED
+"response = sendRequestAndVerify(findTestObject(""update""))",,,,2023-04-14 12:53:15,2023-04-14 12:53:15,0.921s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-04-14 12:53:15,2023-04-14 12:53:15,0.001s,PASSED
